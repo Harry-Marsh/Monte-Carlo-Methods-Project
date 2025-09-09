@@ -1,5 +1,4 @@
 # Monte Carlo Simulation Project
-# Candidate number: 248605
 # Part 1: Rejection Sampling and Importance Sampling
 # Part 2: Markov Chain Simulation and MCMC
 # Part 3: MCS in current research topics - Sonawane PDEs
