@@ -1,11 +1,18 @@
-# Monte Carlo Simulation Project
-# Part 1: Rejection Sampling and Importance Sampling
-# Part 2: Markov Chain Simulation and MCMC
-# Part 3: MCS in current research topics - Sonawane PDEs
+# Monte Carlo Simulation Project (R)
+# Parts:
+#   (1) Rejection & Importance Sampling – heavy-tailed target; KS test; IS for E|X|
+#   (2) Markov Chains / MCMC – 5x5 P; stationary vs empirical from long run
+#   (3) Random-walk PDE solver – 1D/2D Laplace; error vs #walks
+# How to run: source("src/monte_carlo_project.R") and run sections top→bottom.
+# Notes: seed set for reproducibility; plots print inline. See docs/overview.md for context.
+# Outputs: hist+PDF overlay & KS table (Part 1); stationary vs empirical table (Part 2);
+#          printed error table + 1D log–log plot (Part 3).
 
-##############################################################################
 
-# Part 1
+# ===== Part 1: Rejection & Importance Sampling ==============================
+# Goal: simulate from heavy-tailed target via rejection; assess fit via KS.
+# Also: importance sampling estimate of E|X|; brief note on weight stability.
+
 #Setup
 set.seed(123)  # for reproducibility
 alpha <- 2.5
@@ -92,9 +99,9 @@ importance_sampling_absX <- function(n, alpha, k, mu) {
 importance_estimate <- importance_sampling_absX(n = 10000, alpha, k, mu)
 print(paste("Estimated E[|X|] via importance sampling:", round(importance_estimate, 4)))
 
-#################################################################################
-
-#Part 2 
+# ===== Part 2: Markov Chains / MCMC ========================================
+# Goal: build a valid 5x5 transition matrix; compute stationary (left eigenvector).
+# Check: simulate a long chain and compare empirical state frequencies vs stationary.
 
 
 # Setup
@@ -135,9 +142,10 @@ print(round(stationary, 4))
 print("Empirical distribution (from simulation):")
 print(round(empirical_dist, 4))
 
-##############################################################################
-
-# Part 3: 
+# ===== Part 3: Random-walk PDE (Laplace) ====================================
+# Goal: estimate u on [0,1] and [0,1]^2 via random walks; compare to ground truth.
+# Expectation: error decreases with number of walks (≈ O(N^−1/2)); plot 1D log–log.
+ 
 
 rm(list = ls())
 set.seed(514)
