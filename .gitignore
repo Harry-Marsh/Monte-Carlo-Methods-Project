@@ -1,0 +1,25 @@
+# OS / editor
+.DS_Store
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+venv/
+.env
+.env.*
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+
+# Data/outputs
+data/*
+!data/.gitkeep
+results/*
+!results/.gitkeep
+figures/*
+!figures/.gitkeep
