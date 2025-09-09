@@ -14,10 +14,13 @@ Clean, runnable R code for three core Monte Carlo topics:
 - Base R only (no extra packages needed)
 
 ## Structure
-What you’ll see when you run it
-- **Part 1:** Histogram with theoretical PDF overlay; a KS table across sample sizes; an IS estimate for E|X| with a short note on weight stability.
-- **Part 2:** The stationary distribution from the transition matrix and the empirical state frequencies from a long chain, shown side by side.
-- **Part 3:** A small error table (1D/2D) and a 1D log–log convergence plot illustrating error decreasing with the number of walks.
+src/
+  monte_carlo_project.R
+docs/
+  overview.md
+figures/   results/   data/   notebooks/
+``` :contentReference[oaicite:3]{index=3}  
+
 
 
 ## Reproduce
