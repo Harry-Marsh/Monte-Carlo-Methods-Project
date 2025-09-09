@@ -13,17 +13,6 @@ Clean, runnable R code for three core Monte Carlo topics:
 - Plots print inline; you can direct outputs to `figures/` / `results/`  
 - Base R only (no extra packages needed)
 
-## Structure
-
-src/
-monte_carlo_project.R # Part 1: rejection/importance; Part 2: Markov chain; Part 3: PDE random walks
-docs/
-overview.md # short project context + results snapshots
-notebooks/ # (optional) demo notebooks if added later
-figures/ # generated plots (empty placeholder)
-results/ # generated tables/files (empty placeholder)
-data/ # (empty placeholder — no private data committed)
-
 
 ## Reproduce
 - R ≥ 4.1  
